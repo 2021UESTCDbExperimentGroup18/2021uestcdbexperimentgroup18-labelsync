@@ -67,16 +67,16 @@ labels: &common
 repos:
   frontend:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
   flask_backend:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
   database:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
