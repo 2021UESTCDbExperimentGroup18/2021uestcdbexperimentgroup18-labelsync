@@ -4,6 +4,8 @@ colors:
   kind: &kind "#3B5BDB"
   status: &status "#F8F9FA"
   bug: &bug "#EE0000"
+  bug-reported: &bug-reported "#ee7b7b"
+  bug-repro: &bug-repro "#F45E43"
   priority: &priority "#F783AC"
   scope: &scope "#27CF79"
   team: &team "#FDF4E8"
@@ -12,17 +14,18 @@ colors:
   documentation: &documentation "#0075CA"
   discussion: &discussion "#A2EEEF"
   feature: &feature "#91CA55"
+  enhancement: &enhancement "#5EBEFF"
   platform: &platform "#BFD4F2"
   blank: &blank "#CFD3D7"
 
 # Labels
 labels: &common
   "bug-needs-info":
-    color: *bug
+    color: *bug-reported
     description: More information is needed for reproduction.
     siblings: ["bug-reported"]
   "bug-repro-available":
-    color: *bug
+    color: *bug-repro
     description: A reproduction exists and needs to be confirmed.
     siblings: ["bug-reported"]
   "bug-confirmed":
@@ -30,15 +33,15 @@ labels: &common
     description: We have confirmed that this is a bug.
     siblings: ["bug-reported"]
   "bug-reported":
-    color: *bug
+    color: *bug-reported
     description: A reported bug.
     alias: ["bug"]
   "feature":
     color: *feature
     description: A request for a new feature.
     alias: ["enhancement"]
-  "improvement":
-    color: *kind
+  "enhancement":
+    color: *enhancement
     description: An improvement to existing feature and code.
   "docs":
     color: *documentation
