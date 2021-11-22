@@ -1,0 +1,83 @@
+# Colors
+colors:
+  area: &area "#FFD700"
+  kind: &kind "#3B5BDB"
+  status: &status "#F8F9FA"
+  bug: &bug "#EE0000"
+  priority: &priority "#F783AC"
+  scope: &scope "#27CF79"
+  team: &team "#FDF4E8"
+  release: &release "#A5D8ff"
+  process: &process "#EB9100"
+  documentation: &documentation "#0075CA"
+  discussion: &discussion "#A2EEEF"
+  feature: &feature "#91CA55"
+  platform: &platform "#BFD4F2"
+  blank: &blank "#CFD3D7"
+
+# Labels
+labels: &common
+  "bug-needs-info":
+    color: *bug
+    description: More information is needed for reproduction.
+    siblings: ["bug"]
+  "bug-repro-available":
+    color: *bug
+    description: A reproduction exists and needs to be confirmed.
+    siblings: ["bug"]
+  "bug-confirmed":
+    color: *bug
+    description: We have confirmed that this is a bug.
+    siblings: ["bug"]
+  "bug-reported":
+    color: *bug
+    description: A reported bug.
+    alias: ["bug"]
+  "feature":
+    color: *feature
+    description: A request for a new feature.
+    alias: ["enhancement"]
+  "improvement":
+    color: *kind
+    description: An improvement to existing feature and code.
+  "docs":
+    color: *documentation
+    description: A documentation change is required.
+    alias: ["documentation"]
+  "discussion":
+    color: *discussion
+    description: Discussion is required.
+  "frontend":
+    color: *platform
+    description: Frontend related problems.
+  "backend":
+    color: *platform
+    description: backend related problems.
+  "database":
+    color: *platform
+    description: database related problems.
+  "wontfix":
+    color: *blank
+    description: 不管 ∠( ᐛ 」∠)＿
+  "duplicate":
+    color: *blank
+    description: 不管 ∠( ᐛ 」∠)＿
+
+
+# Repositories
+repos:
+  frontend:
+    config:
+      removeUnconfiguredLabels: false
+    labels:
+      <<: *common
+  flask_backend:
+    config:
+      removeUnconfiguredLabels: false
+    labels:
+      <<: *common
+  database:
+    config:
+      removeUnconfiguredLabels: false
+    labels:
+      <<: *common
