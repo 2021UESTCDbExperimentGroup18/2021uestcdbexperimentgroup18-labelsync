@@ -20,15 +20,15 @@ labels: &common
   "bug-needs-info":
     color: *bug
     description: More information is needed for reproduction.
-    siblings: ["bug"]
+    siblings: ["bug-reported"]
   "bug-repro-available":
     color: *bug
     description: A reproduction exists and needs to be confirmed.
-    siblings: ["bug"]
+    siblings: ["bug-reported"]
   "bug-confirmed":
     color: *bug
     description: We have confirmed that this is a bug.
-    siblings: ["bug"]
+    siblings: ["bug-reported"]
   "bug-reported":
     color: *bug
     description: A reported bug.
