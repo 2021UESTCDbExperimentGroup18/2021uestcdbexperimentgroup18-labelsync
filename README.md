@@ -1,2 +1,3 @@
 # 2021uestcdbexperimentgroup18-labelsync
-LabelSync configuration repository.
+
+本repo用于同步各repo之间的label,以达到看板上label的统一为目的,请勿随意提交pr

@@ -6,64 +6,77 @@ colors:
   bug: &bug "#EE0000"
   priority: &priority "#F783AC"
   scope: &scope "#27CF79"
-  team: &team'#FDF4E8'
+  team: &team "#FDF4E8"
   release: &release "#A5D8ff"
-  process: &process' "#EB9100"
+  process: &process "#EB9100"
+  documentation: &documentation "#0075CA"
+  discussion: &discussion "#A2EEEF"
+  feature: &feature "#91CA55"
+  platform: &platform "#BFD4F2"
+  blank: &blank "#CFD3D7"
 
 # Labels
 labels: &common
-  "bug/0-needs-info":
+  "bug-needs-info":
     color: *bug
     description: More information is needed for reproduction.
-    siblings: ["kind/bug"]
-  "bug/1-repro-available":
+    siblings: ["bug-reported"]
+  "bug-repro-available":
     color: *bug
     description: A reproduction exists and needs to be confirmed.
-    siblings: ["kind/bug"]
-  "bug/2-confirmed":
+    siblings: ["bug-reported"]
+  "bug-confirmed":
     color: *bug
     description: We have confirmed that this is a bug.
-    siblings: ["kind/bug"]
-  "kind/bug":
+    siblings: ["bug-reported"]
+  "bug-reported":
     color: *bug
     description: A reported bug.
     alias: ["bug"]
-  "kind/regression":
-    color: *kind
-    description: A reported bug in functionality that used to work before.
-  "kind/feature":
-    color: *kind
+  "feature":
+    color: *feature
     description: A request for a new feature.
     alias: ["enhancement"]
-  "kind/improvement":
+  "improvement":
     color: *kind
     description: An improvement to existing feature and code.
-  "kind/docs":
-    color: *kind
+  "docs":
+    color: *documentation
     description: A documentation change is required.
     alias: ["documentation"]
-  "kind/discussion":
-    color: *kind
+  "discussion":
+    color: *discussion
     description: Discussion is required.
-  "kind/question":
-    color: *kind
-    description: Developer asked a question. No code changes required.
-    alias: ["question"]
+  "frontend":
+    color: *platform
+    description: Frontend related problems.
+  "backend":
+    color: *platform
+    description: backend related problems.
+  "database":
+    color: *platform
+    description: database related problems.
+  "wontfix":
+    color: *blank
+    description: 不管 ∠( ᐛ 」∠)＿
+  "duplicate":
+    color: *blank
+    description: 不管 ∠( ᐛ 」∠)＿
 
 # Repositories
 repos:
   frontend:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
   flask_backend:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
   database:
     config:
-      removeUnconfiguredLabels: false
+      removeUnconfiguredLabels: True
     labels:
       <<: *common
